@@ -16,10 +16,10 @@
     const items = Array.from(track.children);
     items.forEach(node => track.appendChild(node.cloneNode(true)));
 
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+   /*  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (reduce.matches) {
       track.style.animation = 'none';
-    }
+    } */
   })();
 
   // Filtros de proyectos
