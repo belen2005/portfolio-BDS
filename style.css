@@ -303,6 +303,9 @@ body {
   overflow: hidden;
   /* oculta la cola del carrusel */
 }
+.skills[data-force-motion="1"] .skills-wrap {
+  animation: skills-marquee 25s linear infinite !important;
+}
 
 .skills-wrap {
   display: flex;
