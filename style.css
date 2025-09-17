@@ -1,0 +1,860 @@
+/* ===== Variables ===== */
+:root {
+  --green: #075244;
+  --green-900: #0a3a2c;
+  --pink: #F7CFE1;
+  --text: #0b2f2a;
+  --muted: #5a6a64;
+  --maxw: 1200px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+}
+
+/* ===== Header ===== */
+.site-header {
+  width: 100%;
+}
+
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* Desktop menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 0;
+  background: var(--text);
+  transition: width .25s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #444;
+  cursor: pointer;
+}
+
+.hamburger .bar, .hamburger::before, .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.hamburger .bar {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger::before {
+  top: 30%;
+}
+
+.hamburger::after {
+  top: 70%;
+}
+
+.hamburger.is-active {
+  background: #222;
+}
+
+.hamburger.is-active::before {
+  transform: translateX(-50%) rotate(45deg);
+  top: 50%;
+}
+
+.hamburger.is-active::after {
+  transform: translateX(-50%) rotate(-45deg);
+  top: 50%;
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+/* ===== Hero ===== */
+.hero {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 32px 24px 72px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(36px, 5.4vw, 54px);
+  line-height: 1.12;
+  letter-spacing: .5px;
+  color: var(--green);
+  margin: 16px 0 28px;
+}
+
+
+
+
+
+.cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  /* opcional para que no se estiren demasiado */
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px 0px 10px 0;
+  padding: 14px 26px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .1px;
+  text-align: center;
+  flex: 1;
+  /* 👈 fuerza a que todos los botones ocupen el mismo ancho */
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .12) inset;
+}
+
+.btn-primary:hover {
+  background: var(--green-900);
+}
+
+.btn-secondary {
+  background: var(--pink);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #F0B3DA;
+}
+
+.btn-secondary:hover {
+  filter: saturate(1.05) brightness(0.98);
+}
+
+/* Right image block */
+.hero-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 980px) {
+
+  /* Layout */
+  .hero {
+    grid-template-columns: 1fr;
+    padding-bottom: 56px;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  /* ocultar mockup en mobile */
+
+  /* Nav: hamburger visible, menú colapsado */
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 68px;
+    right: 16px;
+    left: 16px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    border-radius: 14px;
+    padding: 10px 8px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1000;
+    /* <- importante para que no quede detrás */
+  }
+
+  .menu.is-open {
+    display: flex;
+  }
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+
+/* ===== Skills base ===== */
+.skills {
+  padding: 80px 24px 100px;
+  overflow: hidden;
+  /* oculta “colas” del carrusel en mobile */
+}
+
+.skills-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 80px;
+}
+
+/* ===== Skills ===== */
+.skills {
+  padding: 80px 24px 100px;
+  overflow: hidden;
+  /* oculta la cola del carrusel */
+}
+
+.skills-wrap {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: skills-marquee 25s linear infinite;
+  will-change: transform;
+}
+
+.skill svg, .skill img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+/* Pausa al pasar el mouse (desktop) o al tocar (mobile) */
+.skills:hover .skills-wrap,
+.skills:active .skills-wrap {
+  animation-play-state: paused;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .skills-wrap {
+    animation: none !important;
+  }
+}
+
+/* Keyframes */
+@keyframes skills-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Wave superior */
+.wave {
+  height: 150px;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: -1px;
+  /* solapa 1px para evitar línea blanca */
+}
+
+.wave svg {
+  display: block;
+}
+
+/* Sección azul */
+.band-quote {
+  background: #E5EEF7;
+  padding: 8px 24px 110px;
+  /* más angosta: antes 120px 24px 160px */
+  overflow: hidden;
+  margin-top: -1px;
+  /* asegura que no se vea línea entre wave y section */
+}
+
+.band-quote__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.band-quote__text {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--green);
+  line-height: 1.5;
+  font-size: clamp(22px, 2.2vw, 34px);
+  /* un poco más chico */
+  margin: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 980px) {
+
+
+  .band-quote__arc {
+    right: -170px;
+    top: 10px;
+    width: 320px;
+    border-width: 80px;
+  }
+}
+
+.about {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 80px 24px 40px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  /* imagen | texto */
+  gap: 48px;
+  align-items: center;
+}
+
+.about-media {
+  position: relative;
+}
+
+/* La imagen la podés reemplazar; estos radios imitan el mockup */
+.about-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+/* Título con viñeta */
+.about-title {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--green);
+  font-weight: 600;
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+  display: flex;
+  align-items: baseline;
+  gap: .35em;
+}
+
+.about-bullet {
+  color: #F6A637;
+  /* puntito naranja */
+  font-size: 1.15em;
+  /* un toque más grande que el texto */
+  transform: translateY(-2px);
+}
+
+.about-text {
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0 0 24px;
+  max-width: 58ch;
+  /* legibilidad */
+}
+
+/* Botón: reutiliza tu .btn & .btn-secondary */
+.about-cta {
+  display: inline-block;
+  padding: 12px 22px;
+  /* un poco más compacto que los CTA del hero */
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 56px 18px 24px;
+  }
+
+  .about-media img {
+    border-radius: 22px;
+  }
+}
+
+
+
+/* ===== Projects ===== */
+.projects {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+}
+
+.projects-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.projects-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--pink);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+}
+
+.projects-rule {
+  flex: 0 0 72px;
+  height: 2px;
+  background: var(--pink);
+  border-radius: 2px;
+}
+
+/* filtros tipo "pill" */
+.projects-filters {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: transparent;
+  border: 1.5px solid #E9C9D8;
+  /* rosa suave */
+  color: var(--green);
+  border-radius: 10px 0 10px 0;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pill:is(:hover, :focus) {
+  outline: none;
+  filter: saturate(1.1);
+}
+
+.pill.is-active {
+  background: #fff;
+  box-shadow: inset 0 0 0 2px #E9C9D8;
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+}
+
+/* card */
+.project-card {
+  display: grid;
+  gap: 12px;
+}
+
+.project-thumb {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
+  opacity: .75;
+  pointer-events: none;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  transition: transform .35s ease;
+}
+
+.project-thumb:hover img {
+  transform: scale(1.02);
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.project-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+}
+
+.project-more {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.project-more:hover {
+  border-color: var(--green);
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-head {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .projects {
+    padding: 56px 18px 28px;
+  }
+}
+
+
+/* Reutilizamos .wave; solo agrego un modificador por claridad */
+.wave--pink{ margin-top:-1px; } /* solapa 1px como antes */
+
+/* ===== Steps ===== */
+.steps{
+  background: var(--pink);
+  margin-top: -1px;                 /* evita línea entre ola y sección */
+  padding: 8px 24px 110px;
+  color: var(--green);
+}
+
+.steps__inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.steps__title{
+  font-family: "Cormorant Garamond", serif;
+  
+  font-weight: 600;
+ font-size: clamp(22px, 2.2vw, 34px);
+  
+  margin: 0 0 34px;
+  color: var(--green);
+}
+
+.steps__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  align-items: start;
+  justify-items: center;
+}
+
+.step{
+  max-width: 420px;
+}
+
+.step__icon{
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+}
+.step__icon svg, .step__icon img{
+  width: 72px; height: 72px; display:block;
+  /* hereda color desde currentColor, por si tus SVG usan fill="currentColor" */
+  color: var(--green);
+}
+
+.step__text{
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(22px, 1.2vw, 34px);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .steps{ padding: 60px 18px 64px; }
+  .steps__grid{ grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 640px){
+  .steps__grid{ grid-template-columns: 1fr; gap: 26px; }
+  .step__icon{ width:64px; height:64px; }
+  .step__icon svg, .step__icon img{ width:64px; height:64px; }
+}
+
+/* ===== Contact ===== */
+.contact{
+  background:#E5EEF7;
+  margin-top:-1px;
+  padding:100px 24px;
+  color:var(--text);
+}
+
+.contact__inner{
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+
+.contact__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Cormorant Garamond", serif;
+ 
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+}
+
+.contact__text{
+  font-size:clamp(16px,1.6vw,18px);
+ 
+}
+.contact__text a{
+  color:var(--text);
+  font-weight:600;
+  text-decoration:none;
+}
+.contact__text a:hover{ text-decoration:underline; }
+
+/* Formulario */
+.contact__form{
+  display:grid;
+  gap:22px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.contact__form input,
+.contact__form textarea{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid rgba(0,0,0,.35);
+  border-radius:6px;
+  font-size:16px;
+  font-family:inherit;
+  background: transparent;   /* 👈 hace que se vea el fondo celeste */
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder{
+  color: rgba(0,0,0,.55);   /* texto placeholder más suave */
+}
+
+.contact__form textarea{ resize:vertical; min-height:160px; }
+
+.contact__form button{
+  justify-self:start;
+  padding:12px 32px;
+  border-radius:10px 0 10px 0;
+}
+
+/* Responsive */
+@media(max-width:700px){
+  .form-row{ grid-template-columns:1fr; }
+}
+
+/* ===== Footer ===== */
+.site-footer{
+  background: var(--green);
+  color: #fff;
+  padding: 40px 24px;
+  margin-top: -1px;
+}
+
+.footer__inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.footer__copy{
+  font-size: 15px;
+  margin: 0;
+}
+
+
+
+.footer__nav{
+  display: flex;
+  align-items: center;        /* centra verticalmente el grupo */
+  justify-content: center;
+  gap: 22px;
+}
+
+/* Caja uniforme para cada icono */
+.footer__icon{
+  width: 40px;
+  height: 40px;
+  display: inline-flex;       /* evita baseline de texto */
+  align-items: center;        /* centra el svg */
+  justify-content: center;    /* centra el svg */
+  line-height: 0;             /* quita altura por texto */
+}
+
+/* Normalizamos el svg */
+.footer__icon svg{
+  height: 28px;               /* MISMA ALTURA para ambos */
+  width: auto;                /* respeta proporción */
+  display: block;             /* elimina espacio por baseline */
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.footer__icon:hover svg{
+  transform: scale(1.1);
+  opacity: .8;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .footer__nav{ gap: 16px; }
+}
+
+/* ===== Proyecto (detalle) ===== */
+.proj-wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+}
+
+.proj-head{ margin: 0 0 16px; }
+
+/* grilla 2 columnas como tu hero/proyectos */
+.proj-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 32px;
+  align-items: center;
+  margin: 24px 0 12px;
+}
+
+.proj-text{
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.32;
+  margin: 0 0 10px;
+}
+
+/* caja de imagen parecida a tus cards */
+.proj-hero{
+  background: #eee;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.proj-hero img{ display:block; width:100%; height:auto; }
+
+/* Responsive */
+@media (max-width: 980px){
+  .proj-grid{ grid-template-columns: 1fr; }
+  .proj-wrap{ padding: 56px 18px 28px; }
+}
