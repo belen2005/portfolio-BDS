@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title id="doc-title">Proyecto • BDS</title>
 
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <!-- Tipografías aproximadas -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
     rel="stylesheet">
 </head>
+
 <body>
 
-     <!-- Header -->
+  <!-- Header -->
   <header class="site-header">
     <nav class="nav" aria-label="Principal">
       <a class="brand" href="index.html" aria-label="BDS Home">
@@ -26,36 +28,31 @@
       </button>
 
       <ul class="menu" id="mainMenu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
-<!-- Contenido del proyecto -->
+  <!-- Contenido del proyecto -->
   <main class="proj-wrap" id="project-root" hidden>
     <header class="proj-head">
-      <!-- Reuso tu estética de títulos con la regla rosa -->
-      <h1 class="projects-title" id="proj-title">
-        <span class="projects-rule" aria-hidden="true"></span>
-        <!-- el título se inyecta por JS -->
-      </h1>
+      <h1 class="proj-title" id="proj-title"></h1>
+      <span class="proj-title-rule" aria-hidden="true"></span>
+      <p class="proj-back">
+        <a class="project-more" href="index.html#proyectos">← Volver a proyectos</a>
+      </p>
     </header>
 
     <section class="proj-grid">
       <!-- Columna izquierda -->
-      <div>
+      <div class="proj-left">
         <p class="proj-text" id="proj-desc"></p>
 
         <div class="cta">
           <a id="btn-web" class="btn btn-primary" href="#" target="_blank" rel="noopener">Ver Web</a>
-          <a id="btn-ux"  class="btn btn-secondary" href="#" target="_blank" rel="noopener">Ver prototipo / Diseño</a>
+          <a id="btn-ux" class="btn btn-secondary" href="#" target="_blank" rel="noopener">Ver prototipo / Diseño</a>
         </div>
-
-        <p style="margin-top:20px">
-          <a class="project-more" href="index.html#proyectos">← Volver a proyectos</a>
-        </p>
       </div>
 
       <!-- Columna derecha -->
@@ -75,9 +72,11 @@
 
 
 </body>
+
 </html>
 
-  <script src="proyecto.js" defer></script>
-  <script src="script.js"></script>
+<script src="proyecto.js" defer></script>
+<script src="script.js"></script>
 </body>
+
 </html>

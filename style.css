@@ -303,9 +303,7 @@ body {
   overflow: hidden;
   /* oculta la cola del carrusel */
 }
-.skills[data-force-motion="1"] .skills-wrap {
-  animation: skills-marquee 25s linear infinite !important;
-}
+
 
 .skills-wrap {
   display: flex;
@@ -322,11 +320,7 @@ body {
   display: block;
 }
 
-/* Pausa al pasar el mouse (desktop) o al tocar (mobile) */
-.skills:hover .skills-wrap,
-.skills:active .skills-wrap {
-  animation-play-state: paused;
-}
+
 
 /* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
@@ -843,34 +837,84 @@ body {
   padding: 72px 24px 40px;
 }
 
-.proj-head{ margin: 0 0 16px; }
+/* Título con regla DEBAJO */
+.proj-head{ margin: 0 0 18px; }
+.proj-title{
+  font-family: "Cormorant Garamond", serif;
+  color: var(--green);
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 56px);
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+.proj-title-rule{
+  display: block;
+  height: 2px;
+  width: 100%;              /* toda la columna izquierda */
+  background: var(--green); /* si la querés rosa: var(--pink) */
+  opacity: .35;
+  border-radius: 2px;
+}
 
-/* grilla 2 columnas como tu hero/proyectos */
+/* grilla: dos columnas alineadas y del mismo alto */
 .proj-grid{
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: 0.92fr 1.08fr; /* texto | imagen */
+  gap: 40px;
+  align-items: stretch;     /* ambos bloques igualan alto */
   margin: 24px 0 12px;
 }
 
+/* Columna izquierda centrada verticalmente con el alto de la imagen */
+.proj-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra el contenido en el alto disponible */
+}
+
+/* Texto descriptivo */
 .proj-text{
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(18px, 2vw, 28px);
-  line-height: 1.32;
-  margin: 0 0 10px;
+  line-height: 1.35;
+  margin: 0 0 18px;
 }
 
-/* caja de imagen parecida a tus cards */
+
 .proj-hero{
-  background: #eee;
-  border-radius: 28px;
+  padding: 0;               
+  display: flex;
+  align-items: center;      /* centra verticalmente la imagen si sobra */
+  justify-content: center;  /* centra horizontalmente */
   overflow: hidden;
+  min-height: 540px;        /* asegura “caja grande” (tuneable) */
 }
-.proj-hero img{ display:block; width:100%; height:auto; }
+.proj-hero img{
+  width: 100%;
+  height: auto;             /* que no se achique de alto */
+  display: block;
+}
+
+/* Botonera del proyecto: reusa tu .cta & .btn */
+.proj-left .cta{ max-width: 520px; }
 
 /* Responsive */
 @media (max-width: 980px){
-  .proj-grid{ grid-template-columns: 1fr; }
+  .proj-grid{ grid-template-columns: 1fr; gap: 28px; }
+  .proj-hero{ min-height: 0; border-radius: 28px; }
   .proj-wrap{ padding: 56px 18px 28px; }
+}
+
+/* Enlace volver a proyectos debajo del título */
+.proj-back{
+  margin: 10px 0 0;
+}
+.proj-back a{
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--green);
+}
+.proj-back a:hover{
+  text-decoration: underline;
 }
