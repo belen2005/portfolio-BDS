@@ -592,8 +592,6 @@ body {
 .project-more {
   color: var(--green);
   font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
 }
 
 .project-more:hover {
@@ -917,4 +915,79 @@ body {
 }
 .proj-back a:hover{
   text-decoration: underline;
+}
+
+
+.related {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+}
+
+.related-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--pink);
+  font-weight: 600;
+  font-size: clamp(26px, 3.8vw, 38px);
+  margin: 0 0 34px;
+}
+
+.related-rule {
+  flex: 0 0 72px;
+  height: 2px;
+  background: var(--pink);
+  border-radius: 2px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.related-card {
+  display: grid;
+  gap: 14px;
+  text-align: center;
+
+}
+
+.related-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.related-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.related-title-sm {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  margin: 0;
+  color: var(--text);
+}
+
+.related-more {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.related-more:hover {
+  border-bottom: 1px solid var(--green);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .related-grid { grid-template-columns: 1fr; }
 }

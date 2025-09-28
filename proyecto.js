@@ -29,7 +29,7 @@ const PROJECTS = {
     title: "Catálogo Tipográfico",
     desc: "Exploración editorial con jerarquías claras y contraste para lectura cómoda.",
     web: "",                                // sin web
-    ux: "https://www.figma.com/file/XXXX/catalogo",
+    ux: "file:///D:/manejo%20tipografico/Catalogo.BelenDosSantos.pdf",
     hero: "img/proj-4.png",
     alt: "Libro negro con relieve tipográfico sobre tela",
     btnUxLabel: "Ver diseño"                 // 👈 cambia solo este
@@ -103,3 +103,66 @@ function handleRoute() {
 }
 window.addEventListener('hashchange', handleRoute);
 window.addEventListener('DOMContentLoaded', handleRoute);
+
+function renderRelated(currentSlug) {
+  const container = document.getElementById('related-grid');
+  const section   = document.getElementById('related-projects');
+  if (!container || !section) return;
+
+  // Filtra proyectos distintos al actual
+  const similares = Object.entries(PROJECTS)
+    .filter(([slug]) => slug !== currentSlug)
+    .slice(0, 3); // solo 3
+
+  container.innerHTML = '';
+  similares.forEach(([slug, data]) => {
+    const card = document.createElement('article');
+    card.className = 'related-card';
+    card.innerHTML = `
+      <a href="proyecto.html?p=${slug}">
+        <img src="${data.hero}" alt="${data.alt}">
+      </a>
+      <div class="related-meta">
+        <h3 class="related-title-sm">${data.title}</h3>
+        <a href="proyecto.html?p=${slug}" class="related-more">Ver más</a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  section.hidden = false;
+}
+
+// en handleRoute:
+function handleRoute(){
+  const slug = getSlug();
+  renderProject(slug);
+  renderRelated(slug);
+}
+// Navegación interna en "Proyectos Similares" sin recargar
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('.related-card a, .related-more');
+  if (!link) return;
+
+  // Si el link es a proyecto.html?p=...
+  const url = new URL(link.href, window.location.href);
+  const slug = url.searchParams.get('p');
+  if (!slug) return;
+
+  // Prevenimos la carga completa y hacemos SPA-like
+  e.preventDefault();
+  history.pushState({ p: slug }, '', `?p=${slug}`);
+
+  renderProject(slug);
+  renderRelated(slug);
+
+  // opcional: sube al inicio
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Soporte para botón Atrás/Adelante
+window.addEventListener('popstate', () => {
+  const slug = getSlug();
+  renderProject(slug);
+  renderRelated(slug);
+});
