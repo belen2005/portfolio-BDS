@@ -45,7 +45,7 @@ body {
 }
 
 .brand img {
-  height: 36px;
+  height: 46px;
   width: auto;
   display: block;
 }
@@ -150,7 +150,7 @@ body {
 .hero h1 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: clamp(36px, 5.4vw, 54px);
+  font-size: clamp(30px, 4.4vw, 34px);
   line-height: 1.12;
   letter-spacing: .3px;
   color: var(--green);
@@ -259,22 +259,29 @@ body {
     display: flex;
   }
 }
+
 @media (max-width: 600px) {
   .cta {
     flex-direction: column;
     gap: 14px;
-    max-width: 100%; /* usan todo el ancho */
+    max-width: 100%;
+    /* usan todo el ancho */
   }
 
   .cta .btn {
-    width: 100%;   /* 👈 fuerza el mismo ancho */
-    flex: none;    /* evita que se repartan raro */
+    width: 100%;
+    /* 👈 fuerza el mismo ancho */
+    flex: none;
+    /* evita que se repartan raro */
   }
-    .cta .btn {
-    flex: 1 1 0;    /* ambos se reparten el ancho por igual */
+
+  .cta .btn {
+    flex: 1 1 0;
+    /* ambos se reparten el ancho por igual */
     text-align: center;
   }
 }
+
 .hamburger:focus {
   outline: none;
 }
@@ -373,9 +380,8 @@ body {
 }
 
 .band-quote__text {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Poltawski Nowy", serif;
   font-style: italic;
-  font-weight: 500;
   color: var(--green);
   line-height: 1.5;
   font-size: clamp(22px, 2.2vw, 34px);
@@ -622,33 +628,36 @@ body {
 
 
 /* Reutilizamos .wave; solo agrego un modificador por claridad */
-.wave--pink{ margin-top:-1px; } /* solapa 1px como antes */
+.wave--pink {
+  margin-top: -1px;
+}
+
+/* solapa 1px como antes */
 
 /* ===== Steps ===== */
-.steps{
+.steps {
   background: var(--pink);
-  margin-top: -1px;                 /* evita línea entre ola y sección */
+  margin-top: -1px;
+  /* evita línea entre ola y sección */
   padding: 8px 24px 110px;
   color: var(--green);
 }
 
-.steps__inner{
+.steps__inner {
   max-width: var(--maxw);
   margin: 0 auto;
   text-align: center;
 }
 
-.steps__title{
-  font-family: "Cormorant Garamond", serif;
-  
-  font-weight: 600;
- font-size: clamp(22px, 2.2vw, 34px);
-  
+.steps__title {
+  font-family: "Poltawski Nowy", serif;
+  font-style: italic;
+  font-size: clamp(22px, 2vw, 34px);
   margin: 0 0 34px;
   color: var(--green);
 }
 
-.steps__grid{
+.steps__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 42px;
@@ -656,52 +665,74 @@ body {
   justify-items: center;
 }
 
-.step{
+.step {
   max-width: 420px;
 }
 
-.step__icon{
+.step__icon {
   width: 72px;
   height: 72px;
   margin: 0 auto 14px;
   display: grid;
   place-items: center;
 }
-.step__icon svg, .step__icon img{
-  width: 72px; height: 72px; display:block;
+
+.step__icon svg, .step__icon img {
+  width: 72px;
+  height: 72px;
+  display: block;
   /* hereda color desde currentColor, por si tus SVG usan fill="currentColor" */
   color: var(--green);
 }
 
-.step__text{
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(22px, 1.2vw, 34px);
+.step__text {
+  font-family: "Poltawski Nowy", serif;
+
+  font-size: clamp(20px, 1.2vw, 20px);
   line-height: 1.45;
   margin: 0;
 }
 
 /* Responsive */
-@media (max-width: 980px){
-  .steps{ padding: 60px 18px 64px; }
-  .steps__grid{ grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 980px) {
+  .steps {
+    padding: 60px 18px 64px;
+  }
+
+  .steps__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
-@media (max-width: 640px){
-  .steps__grid{ grid-template-columns: 1fr; gap: 26px; }
-  .step__icon{ width:64px; height:64px; }
-  .step__icon svg, .step__icon img{ width:64px; height:64px; }
+
+@media (max-width: 640px) {
+  .steps__grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .step__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .step__icon svg, .step__icon img {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 /* ===== Contact ===== */
-.contact{
-  background:#E5EEF7;
-  margin-top:-1px;
-  padding:100px 24px;
-  color:var(--text);
+.contact {
+  background: #E5EEF7;
+  margin-top: -1px;
+  padding: 100px 24px;
+  color: var(--text);
 }
 
-.contact__inner{
-  max-width:var(--maxw);
-  margin:0 auto;
+.contact__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
 }
 
 
@@ -710,73 +741,84 @@ body {
   align-items: center;
   gap: 16px;
   font-family: "Cormorant Garamond", serif;
- 
+
   font-weight: 600;
   font-size: clamp(28px, 4vw, 42px);
   margin: 0;
 }
 
-.contact__text{
-  font-size:clamp(16px,1.6vw,18px);
- 
+.contact__text {
+  font-size: clamp(16px, 1.6vw, 18px);
+
 }
-.contact__text a{
-  color:var(--text);
-  font-weight:600;
-  text-decoration:none;
+
+.contact__text a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
 }
-.contact__text a:hover{ text-decoration:underline; }
+
+.contact__text a:hover {
+  text-decoration: underline;
+}
 
 /* Formulario */
-.contact__form{
-  display:grid;
-  gap:22px;
+.contact__form {
+  display: grid;
+  gap: 22px;
 }
 
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .contact__form input,
-.contact__form textarea{
-  width:100%;
-  padding:14px 16px;
-  border:1px solid rgba(0,0,0,.35);
-  border-radius:6px;
-  font-size:16px;
-  font-family:inherit;
-  background: transparent;   /* 👈 hace que se vea el fondo celeste */
+.contact__form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, .35);
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  background: transparent;
+  /* 👈 hace que se vea el fondo celeste */
 }
 
 .contact__form input::placeholder,
-.contact__form textarea::placeholder{
-  color: rgba(0,0,0,.55);   /* texto placeholder más suave */
+.contact__form textarea::placeholder {
+  color: rgba(0, 0, 0, .55);
+  /* texto placeholder más suave */
 }
 
-.contact__form textarea{ resize:vertical; min-height:160px; }
+.contact__form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
 
-.contact__form button{
-  justify-self:start;
-  padding:12px 32px;
-  border-radius:10px 0 10px 0;
+.contact__form button {
+  justify-self: start;
+  padding: 12px 32px;
+  border-radius: 10px 0 10px 0;
 }
 
 /* Responsive */
-@media(max-width:700px){
-  .form-row{ grid-template-columns:1fr; }
+@media(max-width:700px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Footer ===== */
-.site-footer{
+.site-footer {
   background: var(--green);
   color: #fff;
   padding: 40px 24px;
   margin-top: -1px;
 }
 
-.footer__inner{
+.footer__inner {
   max-width: var(--maxw);
   margin: 0 auto;
   display: flex;
@@ -786,58 +828,71 @@ body {
   text-align: center;
 }
 
-.footer__copy{
+.footer__copy {
   font-size: 15px;
   margin: 0;
 }
 
 
 
-.footer__nav{
+.footer__nav {
   display: flex;
-  align-items: center;        /* centra verticalmente el grupo */
+  align-items: center;
+  /* centra verticalmente el grupo */
   justify-content: center;
   gap: 22px;
 }
 
 /* Caja uniforme para cada icono */
-.footer__icon{
+.footer__icon {
   width: 40px;
   height: 40px;
-  display: inline-flex;       /* evita baseline de texto */
-  align-items: center;        /* centra el svg */
-  justify-content: center;    /* centra el svg */
-  line-height: 0;             /* quita altura por texto */
+  display: inline-flex;
+  /* evita baseline de texto */
+  align-items: center;
+  /* centra el svg */
+  justify-content: center;
+  /* centra el svg */
+  line-height: 0;
+  /* quita altura por texto */
 }
 
 /* Normalizamos el svg */
-.footer__icon svg{
-  height: 28px;               /* MISMA ALTURA para ambos */
-  width: auto;                /* respeta proporción */
-  display: block;             /* elimina espacio por baseline */
+.footer__icon svg {
+  height: 28px;
+  /* MISMA ALTURA para ambos */
+  width: auto;
+  /* respeta proporción */
+  display: block;
+  /* elimina espacio por baseline */
   transition: transform .25s ease, opacity .25s ease;
 }
 
-.footer__icon:hover svg{
+.footer__icon:hover svg {
   transform: scale(1.1);
   opacity: .8;
 }
 
 /* Responsive */
-@media(max-width:600px){
-  .footer__nav{ gap: 16px; }
+@media(max-width:600px) {
+  .footer__nav {
+    gap: 16px;
+  }
 }
 
 /* ===== Proyecto (detalle) ===== */
-.proj-wrap{
+.proj-wrap {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 72px 24px 40px;
 }
 
 /* Título con regla DEBAJO */
-.proj-head{ margin: 0 0 18px; }
-.proj-title{
+.proj-head {
+  margin: 0 0 18px;
+}
+
+.proj-title {
   font-family: "Cormorant Garamond", serif;
   color: var(--green);
   font-weight: 600;
@@ -845,75 +900,100 @@ body {
   margin: 0 0 10px;
   line-height: 1.1;
 }
-.proj-title-rule{
+
+.proj-title-rule {
   display: block;
   height: 2px;
-  width: 100%;              /* toda la columna izquierda */
-  background: var(--green); /* si la querés rosa: var(--pink) */
+  width: 100%;
+  /* toda la columna izquierda */
+  background: var(--green);
+  /* si la querés rosa: var(--pink) */
   opacity: .35;
   border-radius: 2px;
 }
 
 /* grilla: dos columnas alineadas y del mismo alto */
-.proj-grid{
+.proj-grid {
   display: grid;
-  grid-template-columns: 0.92fr 1.08fr; /* texto | imagen */
+  grid-template-columns: 0.92fr 1.08fr;
+  /* texto | imagen */
   gap: 40px;
-  align-items: stretch;     /* ambos bloques igualan alto */
+  align-items: stretch;
+  /* ambos bloques igualan alto */
   margin: 24px 0 12px;
 }
 
 /* Columna izquierda centrada verticalmente con el alto de la imagen */
-.proj-left{
+.proj-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* centra el contenido en el alto disponible */
+  justify-content: center;
+  /* centra el contenido en el alto disponible */
 }
 
 /* Texto descriptivo */
-.proj-text{
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(18px, 2vw, 28px);
+.proj-text {
+   font-family: "Inter", sans-serif;
+  font-size: clamp(18px, 1.5vw, 28px);
   line-height: 1.35;
   margin: 0 0 18px;
 }
 
 
-.proj-hero{
-  padding: 0;               
+.proj-hero {
+  padding: 0;
   display: flex;
-  align-items: center;      /* centra verticalmente la imagen si sobra */
-  justify-content: center;  /* centra horizontalmente */
+  align-items: center;
+  /* centra verticalmente la imagen si sobra */
+  justify-content: center;
+  /* centra horizontalmente */
   overflow: hidden;
-  min-height: 540px;        /* asegura “caja grande” (tuneable) */
+  min-height: 540px;
+  /* asegura “caja grande” (tuneable) */
 }
-.proj-hero img{
+
+.proj-hero img {
   width: 100%;
-  height: auto;             /* que no se achique de alto */
+  height: auto;
+  /* que no se achique de alto */
   display: block;
 }
 
 /* Botonera del proyecto: reusa tu .cta & .btn */
-.proj-left .cta{ max-width: 520px; }
+.proj-left .cta {
+  max-width: 520px;
+}
 
 /* Responsive */
-@media (max-width: 980px){
-  .proj-grid{ grid-template-columns: 1fr; gap: 28px; }
-  .proj-hero{ min-height: 0; border-radius: 28px; }
-  .proj-wrap{ padding: 56px 18px 28px; }
+@media (max-width: 980px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .proj-hero {
+    min-height: 0;
+    border-radius: 28px;
+  }
+
+  .proj-wrap {
+    padding: 56px 18px 28px;
+  }
 }
 
 /* Enlace volver a proyectos debajo del título */
-.proj-back{
+.proj-back {
   margin: 10px 0 0;
 }
-.proj-back a{
+
+.proj-back a {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   color: var(--green);
 }
-.proj-back a:hover{
+
+.proj-back a:hover {
   text-decoration: underline;
 }
 
@@ -986,8 +1066,13 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 640px) {
-  .related-grid { grid-template-columns: 1fr; }
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
 }

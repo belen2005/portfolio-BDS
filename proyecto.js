@@ -2,24 +2,24 @@
 const PROJECTS = {
   "backery-kitchen": {
     title: "Backery Kitchen",
-    desc: "Sitio para panadería con catálogo, cursos y reservas. Experiencia cálida y clara, enfocada en conversión.",
+    desc: " Bakery kitchen es una web dedicada a ofrecer talleres de panadería. La página está diseñada para ser intuitiva y funcional, facilitando a los usuarios encontrar información sobre los talleres, contactar con los organizadores, y conocer más sobre la historia de Bakery Kitchen",
     web: "https://bakerykitchen.netlify.app/",
     hero: "img/proj-1.png",
     alt: "Mockup de Backery Kitchen en notebook y pantallas flotantes"
   },
   "brava": {
     title: "Brava",
-    desc: "Explorá productos, comprá o reservá una mesa en la panadería Brava con una experiencia completa y personalizada.",
+    desc: "Esta aplicación te permitirá explorar los productos de la panadería Brava, realizar tus compras o reservar una mesa, asegurando una experiencia más completa y personalizada.",
     web: "https://sensational-klepon-55d1f0.netlify.app/home",
     ux: "https://www.figma.com/design/e73sxVB2gnzMwUZgmiswK1/Proyecto-web--BRAVA?node-id=0-1&p=f&t=fGWIRoYYHHlwwAZp-0",
     hero: "img/proj-2.png",
     alt: "Mockup de Brava con pantallas sobre notebook",
-    btnWebLabel: "Ver Web",                 // 👈 opcional
-    btnUxLabel: "Ver prototipo / Diseño"   // 👈 opcional
+    btnWebLabel: "Ver Web",
+    btnUxLabel: "Ver prototipo / Diseño"
   },
   "cudpadel": {
     title: "CudPadel",
-    desc: "UI para reservar canchas y gestionar turnos de pádel de forma rápida desde el celular.",
+    desc: "Culpadel es una identidad digital que cuenta con el diseño de una aplicación pensada para brindar una experiencia clara y atractiva. El proyecto combina simplicidad y estilo, permitiendo a los usuarios conectar fácilmente con la propuesta de la marca.",
     web: "https://www.figma.com/proto/iaGCv4stGiXWdUCoit1HTo/Web-culpadel?node-id=1-447&t=usTlxydIeVpVZV1n-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
     ux: "https://www.figma.com/proto/iaGCv4stGiXWdUCoit1HTo/Web-culpadel?node-id=2016-323&t=usTlxydIeVpVZV1n-0&scaling=scale-down-width&content-scaling=fixed&page-id=2016%3A102",
     hero: "img/proj-3.png",
@@ -28,16 +28,16 @@ const PROJECTS = {
   "catalogo-tipografico": {
     title: "Catálogo Tipográfico",
     desc: "Exploración editorial con jerarquías claras y contraste para lectura cómoda.",
-    web: "",                                // sin web
+    web: "",
     ux: "file:///D:/manejo%20tipografico/Catalogo.BelenDosSantos.pdf",
     hero: "img/proj-4.png",
     alt: "Libro negro con relieve tipográfico sobre tela",
-    btnUxLabel: "Ver diseño"                 // 👈 cambia solo este
+    btnUxLabel: "Ver diseño"
   },
 
   "ilumina": {
     title: "Ilumina",
-    desc: "Identidad y tarjetas minimalistas con formas modulares. Focus en ritmo y balance.",
+    desc: "Ilumina es una identidad corporativa diseñada para transmitir claridad y modernidad. El proyecto se centra en una presencia digital atractiva y profesional, destacando la esencia de la marca a través de un estilo visual simple y coherente.",
     web: "",
     ux: "https://www.figma.com/proto/28fIg9naPEgWzf4kTakZQS/Imagen-corporativa-web?node-id=2026-2&t=zFjruapglKT6vlZn-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1",
     hero: "img/proj-5.png",
@@ -47,8 +47,6 @@ const PROJECTS = {
   // ...
 };
 
-
-// ===== Helpers =====
 function getSlug() {
   const url = new URL(window.location.href);
   const q = url.searchParams.get('p');
