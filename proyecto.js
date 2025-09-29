@@ -25,13 +25,13 @@ const PROJECTS = {
     hero: "img/proj-3.png",
     alt: "UI móvil de CudPadel con tarjetas de reserva"
   },
-  "catalogo-tipografico": {
-    title: "Catálogo Tipográfico",
-    desc: "Exploración editorial con jerarquías claras y contraste para lectura cómoda.",
-    web: "",
-    ux: "file:///D:/manejo%20tipografico/Catalogo.BelenDosSantos.pdf",
+  "hobby": {
+    title: "Hobby",
+    desc: " Hobby es una aplicación web diseñada para ayudar a los usuarios a gestionar y organizar sus hobbies de manera efectiva. Ofrece una experiencia de usuario simplificada, permitiendo a los usuarios registrar, filtrar, editar y eliminar sus hobbies",
+    web: "https://hobby-pw2.netlify.app/login.html",
+    ux: "",
     hero: "img/proj-4.png",
-    alt: "Libro negro con relieve tipográfico sobre tela",
+    alt: "hobby",
     btnUxLabel: "Ver diseño"
   },
 
