@@ -811,14 +811,14 @@ body {
 }
 
 /* ===== Footer ===== */
-.site-footer {
+.site-footer{
   background: var(--green);
   color: #fff;
   padding: 40px 24px;
-  margin-top: -1px;
+  margin-top: -1px; /* para solapar con la sección anterior si hace falta */
 }
 
-.footer__inner {
+.footer__inner{
   max-width: var(--maxw);
   margin: 0 auto;
   display: flex;
@@ -828,57 +828,34 @@ body {
   text-align: center;
 }
 
-.footer__copy {
+.footer__copy{
   font-size: 15px;
   margin: 0;
 }
 
-
-
-.footer__nav {
+.footer__nav{
   display: flex;
-  align-items: center;
-  /* centra verticalmente el grupo */
-  justify-content: center;
-  gap: 22px;
+  gap: 24px;
 }
 
-/* Caja uniforme para cada icono */
-.footer__icon {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  /* evita baseline de texto */
-  align-items: center;
-  /* centra el svg */
-  justify-content: center;
-  /* centra el svg */
-  line-height: 0;
-  /* quita altura por texto */
+.footer__nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity .25s ease;
 }
-
-/* Normalizamos el svg */
-.footer__icon svg {
-  height: 28px;
-  /* MISMA ALTURA para ambos */
-  width: auto;
-  /* respeta proporción */
-  display: block;
-  /* elimina espacio por baseline */
-  transition: transform .25s ease, opacity .25s ease;
-}
-
-.footer__icon:hover svg {
-  transform: scale(1.1);
-  opacity: .8;
+.footer__nav a:hover{
+  opacity: .7;
 }
 
 /* Responsive */
-@media(max-width:600px) {
-  .footer__nav {
-    gap: 16px;
+@media(max-width:600px){
+  .footer__nav{
+    flex-direction: column;
+    gap: 12px;
   }
 }
+
 
 /* ===== Proyecto (detalle) ===== */
 .proj-wrap {
