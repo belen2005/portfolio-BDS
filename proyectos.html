@@ -7,7 +7,6 @@
   <title id="doc-title">Proyecto • BDS</title>
   <link rel="icon" type="image/png" href="img/punto.png" />
   <link rel="stylesheet" href="style.css">
-  <!-- Tipografías aproximadas -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
     rel="stylesheet">
@@ -17,19 +16,14 @@
 </head>
 
 <body>
-
-  <!-- Header -->
   <header class="site-header">
     <nav class="nav" aria-label="Principal">
       <a class="brand" href="index.html" aria-label="BDS Home">
         <img src="img/logo-bds.png" alt="BDS.">
       </a>
-
-      <!-- Botón hamburguesa (aparece sólo en mobile por CSS) -->
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenu">
         <span class="bar" aria-hidden="true"></span>
       </button>
-
       <ul class="menu" id="mainMenu">
         <li><a href="index.html#sobre-mi">Sobre mí</a></li>
         <li><a href="index.html#proyectos">Proyectos</a></li>
@@ -37,7 +31,6 @@
       </ul>
     </nav>
   </header>
-  <!-- Contenido del proyecto -->
   <main class="proj-wrap" id="project-root" hidden>
     <header class="proj-head">
       <h1 class="proj-title" id="proj-title"></h1>
@@ -46,9 +39,7 @@
         <a class="project-more" href="index.html#proyectos">← Volver a proyectos</a>
       </p>
     </header>
-
     <section class="proj-grid">
-      <!-- Columna izquierda -->
       <div class="proj-left">
         <p class="proj-text" id="proj-desc"></p>
 
@@ -57,15 +48,12 @@
           <a id="btn-ux" class="btn btn-secondary" href="#" target="_blank" rel="noopener">Ver prototipo / Diseño</a>
         </div>
       </div>
-
-      <!-- Columna derecha -->
       <aside class="proj-hero">
         <img id="proj-hero" src="" alt="" loading="lazy">
       </aside>
     </section>
   </main>
 
-  <!-- 404 simple -->
   <section class="proj-wrap" id="not-found" hidden>
     <h2 class="projects-title">
       <span class="projects-rule" aria-hidden="true"></span>Proyecto no encontrado
@@ -81,36 +69,21 @@
     <div class="related-grid" id="related-grid">
     </div>
   </section>
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer__inner">
       <p class="footer__copy">
         © 2025 Belén Dos Santos
       </p>
       <nav class="footer__nav" aria-label="Redes sociales">
-        <a href="https://www.linkedin.com/in/belen-dossantos/" target="_blank" rel="noopener" class="footer__icon">
-          <svg viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7.72347 4.16667C7.72298 5.13913 7.33621 6.07157 6.64823 6.75886C5.96026 7.44615 5.02743 7.83199 4.05497 7.8315C3.08251 7.83102 2.15007 7.44424 1.46278 6.75626C0.775493 6.06829 0.389651 5.13546 0.390137 4.163C0.390623 3.19054 0.777398 2.2581 1.46538 1.57081C2.15335 0.883525 3.08618 0.497683 4.05864 0.498169C5.0311 0.498656 5.96354 0.88543 6.65083 1.57341C7.33812 2.26138 7.72396 3.19421 7.72347 4.16667ZM7.83347 10.5467H0.500137V33.5H7.83347V10.5467ZM19.4201 10.5467H12.1235V33.5H19.3468V21.455C19.3468 14.745 28.0918 14.1217 28.0918 21.455V33.5H35.3335V18.9617C35.3335 7.65 22.3901 8.07167 19.3468 13.6267L19.4201 10.5467Z"
-              fill="white" />
-          </svg>
-
-        </a>
-        <a href="https://www.behance.net/belendossantos" target="_blank" rel="noopener" class="footer__icon">
-          <svg viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M34.8333 3.16667H23.75V0H34.8333V3.16667ZM37.5662 19C36.8663 21.0536 34.3536 23.75 29.4896 23.75C24.6224 23.75 20.6799 21.0124 20.6799 14.7646C20.6799 8.57375 24.3612 5.39125 29.3344 5.39125C34.2143 5.39125 37.1941 8.21275 37.8448 12.3991C37.9683 13.2003 38.0174 14.2801 37.9953 15.7874H25.2858C25.4917 20.8715 30.8006 21.0314 32.5502 19H37.5662ZM25.3967 12.6667H33.2579C33.0917 10.2173 31.4593 9.15325 29.336 9.15325C27.0148 9.15325 25.7308 10.3693 25.3967 12.6667ZM10.2378 23.731H0V0.0332499H11.0089C19.6793 0.1615 19.8439 8.65292 15.3156 10.9678C20.7955 12.9628 20.9792 23.731 10.2378 23.731ZM4.75 9.5H10.4247C14.3957 9.5 15.0258 4.75 9.93067 4.75H4.75V9.5ZM10.1191 14.25H4.75V19.0253H10.0399C14.877 19.0253 14.5809 14.25 10.1191 14.25Z"
-              fill="white" />
-          </svg>
-
-
-        </a>
+        <a href="https://www.linkedin.com/in/belen-dossantos/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.behance.net/belendossantos" target="_blank" rel="noopener">Behance</a>
       </nav>
     </div>
   </footer>
 </body>
 
 </html>
-
 <script src="proyecto.js" defer></script>
 <script src="script.js"></script>
 </body>

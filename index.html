@@ -7,7 +7,6 @@
   <title>BDS – Portafolio</title>
   <link rel="icon" type="image/png" href="img/punto.png" />
   <link rel="stylesheet" href="style.css">
-  <!-- Tipografías aproximadas -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
     rel="stylesheet">
@@ -17,20 +16,15 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header class="site-header">
     <nav class="nav" aria-label="Principal">
       <a class="brand" href="index.html" aria-label="BDS Home">
         <img src="img/logo-bds.png" alt="BDS.">
       </a>
-
-      <!-- Botón hamburguesa (aparece sólo en mobile por CSS) -->
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenu">
         <span class="bar" aria-hidden="true"></span>
       </button>
-
       <ul class="menu" id="mainMenu">
-
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -38,7 +32,6 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <main class="hero" id="home">
     <section>
       <h1>
@@ -54,12 +47,10 @@
     </section>
 
     <aside class="hero-visual" aria-hidden="true">
-      <!-- Reemplaza src con una ÚNICA imagen que ya incluya el mockup y las formas de fondo -->
       <img src="img/hero-mockup.png" alt="Mockup de portafolio en notebook" />
     </aside>
   </main>
 
-  <!-- Skills / Herramientas -->
   <section class="skills" aria-label="Herramientas">
     <div class="skills-wrap">
       <div class="skill"><svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,8 +106,6 @@
     </div>
   </section>
 
-  <!-- Franja curvada con frase -->
-  <!-- Wave superior -->
   <div class="wave">
     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
       <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
@@ -124,7 +113,6 @@
     </svg>
   </div>
 
-  <!-- Franja con frase y arco -->
   <section class="band-quote" aria-label="Mensaje">
     <div class="band-quote__inner">
       <p class="band-quote__text">
@@ -134,10 +122,8 @@
     <div class="band-quote__arc" aria-hidden="true"></div>
   </section>
 
-  <!-- Sobre mí -->
   <section class="about" id="sobre-mi" aria-label="Sobre mí">
     <div class="about-media">
-      <!-- Poné tu imagen acá (con tu círculo/fondo como prefieras) -->
       <img src="img/belen-placeholder.png" alt="Retrato de Belén">
     </div>
 
@@ -157,7 +143,6 @@
     </div>
   </section>
 
-  <!-- Ola superior rosa -->
   <div class="wave wave--pink" aria-hidden="true">
     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%;width:100%;">
       <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
@@ -165,13 +150,11 @@
     </svg>
   </div>
 
-  <!-- Mis pasos -->
   <section class="steps" aria-labelledby="steps-title">
     <div class="steps__inner">
       <h2 id="steps-title" class="steps__title">Lo que nunca falta en mi proceso</h2>
 
       <div class="steps__grid">
-        <!-- Paso 1 -->
         <article class="step">
           <div class="step__icon" aria-hidden="true">
             <svg viewBox="0 0 63 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +169,6 @@
           </p>
         </article>
 
-        <!-- Paso 2 -->
         <article class="step">
           <div class="step__icon" aria-hidden="true">
             <svg viewBox="0 0 54 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,8 +182,6 @@
             Organización, para mantener <br>el rumbo
           </p>
         </article>
-
-        <!-- Paso 3 -->
         <article class="step">
           <div class="step__icon" aria-hidden="true">
             <svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,8 +189,6 @@
                 d="M4.636 2.15489C2.982 2.94489 1.75 4.83889 1.75 7.11889C1.75 11.3459 4.749 13.7709 7.587 16.0669C7.87433 16.2976 8.15833 16.5286 8.439 16.7599C8.965 17.1929 9.434 17.5739 9.886 17.8499C10.338 18.1259 10.699 18.2499 11 18.2499C11.324 18.2499 11.689 18.1109 12.127 17.8409C10.765 16.7939 9.25 15.3409 9.25 13.0589C9.25 11.4859 10.187 10.1319 11.523 9.55089C12.733 9.02489 14.191 9.16089 15.5 10.1639C16.314 9.53989 17.192 9.24589 18.047 9.24989C18.6714 9.25282 19.2845 9.41677 19.827 9.72589C20.1115 8.88632 20.2544 8.00532 20.25 7.11889C20.25 4.83889 19.018 2.94489 17.364 2.15489C15.768 1.39189 13.614 1.58489 11.552 3.82489C11.4818 3.90126 11.3964 3.96222 11.3014 4.00392C11.2064 4.04562 11.1038 4.06715 11 4.06715C10.8962 4.06715 10.7936 4.04562 10.6986 4.00392C10.6036 3.96222 10.5182 3.90126 10.448 3.82489C8.386 1.58489 6.232 1.39189 4.636 2.15489ZM21.022 10.7989C21.4967 11.4567 21.7515 12.2477 21.75 13.0589C21.75 14.5769 21.08 15.7259 20.24 16.6249C19.574 17.3379 18.756 17.9359 18.062 18.4439L17.621 18.7689C17.342 18.9789 17.021 19.2179 16.691 19.4009C16.361 19.5839 15.956 19.7499 15.5 19.7499C15.044 19.7499 14.639 19.5839 14.308 19.3999C13.9942 19.2172 13.6931 19.0134 13.407 18.7899C12.701 19.2969 11.884 19.7499 11 19.7499C10.301 19.7499 9.66 19.4699 9.104 19.1299C8.547 18.7899 7.997 18.3399 7.484 17.9169C7.20185 17.685 6.91818 17.455 6.633 17.2269C3.851 14.9959 0.25 12.1079 0.25 7.11989C0.25 4.31489 1.768 1.86389 3.99 0.801888C6.098 -0.206112 8.692 0.101888 11 2.25389C13.307 0.102888 15.902 -0.206112 18.01 0.801888C20.232 1.86389 21.75 4.31489 21.75 7.11989C21.75 8.48989 21.479 9.70789 21.022 10.7999M12.121 10.9279C11.7103 11.112 11.362 11.4116 11.1186 11.7901C10.8752 12.1687 10.7471 12.6098 10.75 13.0599C10.75 14.9429 12.22 16.0589 13.845 17.2499C13.9917 17.3566 14.1363 17.4632 14.279 17.5699C14.571 17.7889 14.811 17.9649 15.037 18.0899C15.263 18.2149 15.406 18.2499 15.5 18.2499C15.594 18.2499 15.738 18.2149 15.963 18.0899C16.188 17.9649 16.429 17.7889 16.721 17.5699C16.8877 17.4452 17.0547 17.3219 17.222 17.1999C17.91 16.6959 18.584 16.2009 19.144 15.6019C19.814 14.8849 20.25 14.0849 20.25 13.0599C20.25 12.4239 20.002 11.8519 19.605 11.4359C19.4037 11.2222 19.1613 11.0514 18.8924 10.9337C18.6235 10.816 18.3335 10.7538 18.04 10.7509C17.445 10.7479 16.736 10.9929 16.027 11.6929C15.8866 11.8315 15.6973 11.9092 15.5 11.9092C15.3027 11.9092 15.1134 11.8315 14.973 11.6929C13.931 10.6629 12.877 10.5989 12.121 10.9279Z"
                 fill="#075244" />
             </svg>
-
-
           </div>
           <p class="step__text">
             Amor, para que cada proyecto <br>tenga algo único
@@ -235,7 +213,6 @@
     </div>
 
     <div class="projects-grid">
-      <!-- Card 1 -->
       <article class="project-card" data-cat="codigo">
         <a class="project-thumb" href="proyectos.html?p=backery-kitchen" aria-label="Ver Backery Kitchen">
           <img src="img/proj-1.png" alt="Backery Kitchen mockup">
@@ -246,7 +223,6 @@
         </div>
       </article>
 
-      <!-- Card 2 -->
       <article class="project-card" data-cat="codigo">
         <a class="project-thumb" href="proyectos.html?p=brava" aria-label="Ver Brava">
           <img src="img/proj-2.png" alt="Brava mockup">
@@ -257,7 +233,6 @@
         </div>
       </article>
 
-      <!-- Card 3 -->
       <article class="project-card" data-cat="figma">
         <a class="project-thumb" href="proyectos.html?p=cudpadel" aria-label="Ver CudPadel">
           <img src="img/proj-3.png" alt="CudPadel UI">
@@ -268,7 +243,6 @@
         </div>
       </article>
 
-      <!-- Card 4 -->
       <article class="project-card" data-cat="codigo">
         <a class="project-thumb" href="proyectos.html?p=hobby" aria-label="Ver Hobby">
           <img src="img/proj-4.png" alt="hobby">
@@ -279,7 +253,6 @@
         </div>
       </article>
 
-      <!-- Card 5 -->
       <article class="project-card" data-cat="figma">
         <a class="project-thumb" href="proyectos.html?p=ilumina" aria-label="Ver Ilumina">
           <img src="img/proj-5.png" alt="Ilumina branding UI">
@@ -291,16 +264,12 @@
       </article>
     </div>
   </section>
-
-  <!-- Ola superior celeste -->
   <div class="wave wave--contact" aria-hidden="true">
     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%;width:100%;">
       <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
         style="stroke:none; fill:#E5EEF7;"></path>
     </svg>
   </div>
-
-  <!-- Contacto -->
   <section class="contact" id="contacto" aria-labelledby="contact-title">
     <div class="contact__inner">
       <h2 id="contact-title" class="contact__title">¡Trabajemos juntos!</h2>
@@ -319,18 +288,18 @@
       </form>
     </div>
   </section>
- <!-- Footer -->
-<footer class="site-footer">
-  <div class="footer__inner">
-    <p class="footer__copy">
-      © 2025 Belén Dos Santos
-    </p>
-    <nav class="footer__nav" aria-label="Redes sociales">
-      <a href="https://www.linkedin.com/in/belen-dossantos/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.behance.net/belendossantos" target="_blank" rel="noopener">Behance</a>
-    </nav>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <p class="footer__copy">
+        © 2025 Belén Dos Santos
+      </p>
+      <nav class="footer__nav" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/in/belen-dossantos/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.behance.net/belendossantos" target="_blank" rel="noopener">Behance</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 <script src="script.js"></script>
 
