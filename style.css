@@ -329,11 +329,9 @@ body {
 
 
 
-/* Accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-  .skills-wrap {
-    animation: none !important;
-  }
+/* Fuerza animación aunque el SO tenga reduce-motion */
+.force-motion .skills-wrap {
+  animation: skills-marquee 25s linear infinite !important;
 }
 
 /* Keyframes */
@@ -851,7 +849,6 @@ body {
 /* Responsive */
 @media(max-width:600px){
   .footer__nav{
-    flex-direction: column;
     gap: 12px;
   }
 }
