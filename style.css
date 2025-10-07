@@ -149,7 +149,7 @@ body {
 
 .hero h1 {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(30px, 4.4vw, 34px);
   line-height: 1.12;
   letter-spacing: .3px;
@@ -170,6 +170,7 @@ body {
 }
 
 .btn {
+  text-decoration: none;
   cursor: pointer;
   border: 0;
   border-radius: 10px 0px 10px 0;
@@ -428,7 +429,7 @@ body {
 .about-title {
   font-family: "Cormorant Garamond", serif;
   color: var(--green);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(28px, 4.2vw, 44px);
   line-height: 1.18;
   margin: 0 0 18px;
@@ -497,7 +498,7 @@ body {
   gap: 16px;
   font-family: "Cormorant Garamond", serif;
   color: var(--pink);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(28px, 4vw, 42px);
   margin: 0;
 }
@@ -596,11 +597,14 @@ body {
 .project-more {
   color: var(--green);
   font-weight: 600;
+  text-decoration: none;
 }
 
-.project-more:hover {
-  border-color: var(--green);
+
+.project-more:hover{
+  border-bottom: 1px solid var(--green);
 }
+
 
 /* responsive */
 @media (max-width: 1100px) {
@@ -740,7 +744,7 @@ body {
   gap: 16px;
   font-family: "Cormorant Garamond", serif;
 
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(28px, 4vw, 42px);
   margin: 0;
 }
@@ -869,7 +873,7 @@ body {
 .proj-title {
   font-family: "Cormorant Garamond", serif;
   color: var(--green);
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(32px, 5vw, 56px);
   margin: 0 0 10px;
   line-height: 1.1;
@@ -957,12 +961,12 @@ body {
 
 /* Enlace volver a proyectos debajo del título */
 .proj-back {
-  margin: 10px 0 0;
+  margin-bottom: 50px;
 }
 
 .proj-back a {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   color: var(--green);
 }
