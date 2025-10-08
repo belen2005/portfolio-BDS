@@ -628,15 +628,10 @@ body {
   }
 }
 
-
-/* Reutilizamos .wave; solo agrego un modificador por claridad */
 .wave--pink {
   margin-top: -1px;
 }
 
-/* solapa 1px como antes */
-
-/* ===== Steps ===== */
 .steps {
   background: var(--pink);
   margin-top: -1px;
@@ -683,7 +678,6 @@ body {
   width: 72px;
   height: 72px;
   display: block;
-  /* hereda color desde currentColor, por si tus SVG usan fill="currentColor" */
   color: var(--green);
 }
 
